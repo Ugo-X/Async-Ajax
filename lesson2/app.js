@@ -140,9 +140,9 @@ function getCountry(country) {
     <div class="country-data">
       <h3 class="country-name">${data.name.common}</h3>
       <h4 class="country-region">${data.region}</h4>
-      <p class="country-row">${data.population}</p>
+      <p class="country-row">${(data.population/1000000).toFixed(1)} M people</p>
       <p class="country-row">${data.languages.eng}</p>
-      <p class="country-row">${data.currencies.name}</p>
+      <p class="country-row">${data.currencies}</p>
 </article>
 `;
     countriesList.insertAdjacentHTML("beforeend", html);
